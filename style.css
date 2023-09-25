@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 4px solid rgba(99, 94, 94, 0.281);
+  background-color: #fff;
+}
+header .navbar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+header .navbar .navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+header .navbar .navbar-nav .nav-item .nav-link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 20px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+header .navbar .navbar-nav .nav-item .nav-icon {
+  border-radius: 3px;
+  margin: 10px;
+  padding: 10px;
+  color: #fff;
+  background-color: rgba(46, 46, 203, 0.871);
+  position: relative;
+}
+header .navbar .navbar-nav .nav-item .nav-icon .notification {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+header .navbar .navbar-nav .nav-item .nav-link span {
+  margin-right: 6px;
+}
+header .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: rgba(25, 25, 212, 0.809);
+}
+header .navbar .navbar-nav .nav-item .nav-icon:hover {
+  color: sandybrown;
+}
+
+header .navbar .navbar-nav .nav-item {
+  position: relative;
+}
+header .navbar .navbar-nav .nav-item .dropdown {
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.15);
+  position: absolute;
+  bottom: -175px;
+  display: none;
+}
+header .navbar .navbar-nav .nav-item .dropdown .navbar-nav {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+header
+  .navbar
+  .navbar-nav
+  .nav-item
+  .dropdown
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  transition: all 0.3s;
+}
+header .navbar .navbar-nav .nav-item:hover .dropdown {
+  display: block;
+}
+header
+  .navbar
+  .navbar-nav
+  .nav-item
+  .dropdown
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  color: rgb(50, 50, 227);
+  background-color: rgba(128, 128, 128, 0.6);
+}
+
+
+.work {
+  display: flex;
+  justify-content: center;
+}
+.work .work-item {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+  letter-spacing: 2px;
+}
+.work .work-item .btn {
+  text-decoration: none;
+  color: #000;
+  padding: 15px 35px;
+  border-radius: 5px;
+  background-color: rgba(169, 228, 255, 0.15);
+  transition: 0.3s;
+}
+.work .work-item .active {
+  background-color: blue;
+  color: #fff;
+}
+.work .work-item .btn:hover {
+  color: #fff;
+  background-color: blue;
+}
+
+
+.feature {
+  display: flex;
+  justify-content: center;
+}
+.feature .feature-content {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+.feature .feature-content .content-box {
+  width: 32%;
+  height: 450px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.feature .feature-content .content-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.feature .feature-content .content-box .content {
+  width: 90%;
+  padding: 30px 20px;
+  border-radius: 5px;
+  line-height: 35px;
+  color: #fff;
+  background-color: rgba(0, 51, 255, 0.833);
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.feature .feature-content .content-box .content .content-icon {
+  display: flex;
+}
+.feature .feature-content .content-box .content .content-icon .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 25px;
+}
+.feature .feature-content .content-box:hover img {
+  transform: scale(1.2);
+}
+.feature .feature-content .content-box:hover .content {
+  opacity: 1;
+  bottom: 45px;
+}
